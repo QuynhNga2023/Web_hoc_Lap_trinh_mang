@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng nhập</title>
+    <link rel="shortcut icon" href="./img/logo_dhcn.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="./log.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.2.0/css/all.css">
+    <script src="./validator.js"></script>
+
+</head>
+
+<body>
+
+    <fieldset>
+        <form action="" id="form-1">
+            <div class="container">
+                <h1>Form Đăng Nhập</h1>
+                <br>
+                <hr>
+                <div class="form-container">
+                    <label for="email"><b>Email</b></label>
+                    <input id="email" type="text" placeholder="Nhập email" name="email">
+                    <span class="form-message invalid"></span> <br>
+                </div>
+                <div class="form-container">
+                    <label for="psw"><b>Mật Khẩu</b></label>
+                    <input id="pass" type="password" placeholder="Nhập mật khẩu" name="psw">
+                    <span class="form-message invalid"></span> <br>
+                </div>
+
+                <div class="clearfix">
+                    <button type="submit" class="loginpbtn" >Đăng nhập</button>
+                </div>
+            </div>
+            <span>Chưa có tài khoản? <a href="./Dang_Ky.html">Đăng ký</a></span>
+        </form>
+
+    </fieldset>
+    <div class="stars"><i class="fa-solid fa-star-of-life"></i></div>
+    <div class="stars"><i class="fa-solid fa-star-of-life"></i></div>
+    <div class="stars"><i class="fa-solid fa-star-of-life"></i></div>
+    <div class="stars"><i class="fa-solid fa-star-of-life"></i></div>
+    <div class="stars"><i class="fa-solid fa-star-of-life"></i></div>
+    <div class="stars"><i class="fa-solid fa-star-of-life"></i></div>
+    <div class="stars"><i class="fa-solid fa-star-of-life"></i></div>
+    <div class="stars"><i class="fa-solid fa-star-of-life"></i></div>
+    <div class="stars"><i class="fa-solid fa-star-of-life"></i></div>
+    <div class="stars"><i class="fa-solid fa-star-of-life"></i></div>
+    <div class="stars"><i class="fa-solid fa-star-of-life"></i></div>
+    <div class="stars"><i class="fa-solid fa-star-of-life"></i></div>
+    <div class="stars"><i class="fa-solid fa-star-of-life"></i></div>
+
+    <script>
+        Validator(
+            {
+                form: '#form-1',
+                errorSelector: '.form-message',
+                rules: [
+                    Validator.isRequired('#email'),
+                    Validator.isEmail('#email'),
+                    Validator.minLength('#pass', 6),
+                ],
+            }
+        );
+    </script>
+    
+</body>
+
+</html>
